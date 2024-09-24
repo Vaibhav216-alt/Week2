@@ -1,0 +1,129 @@
+Question 1: Definition and Example for Programming Terms
+
+Term	Definition	Example
+type	A classification that specifies the kind of data a variable can hold and the operations that can be performed on it.	int, float, str, bool
+variables	Named containers used to store data in a program.	age = 25, name = "Alice"
+boolean	A data type representing logical values, either True or False.	is_raining = True, is_sunny = False
+arithmetic operators	Symbols used to perform mathematical calculations.	+, -, *, /, %
+operands	The values or variables on which an operator acts.	In 5 + 3, the operands are 5 and 3.
+comparison operators	Symbols used to compare two values and return a boolean result.	==, !=, <, >, <=, >=
+boolean operators	Symbols used to combine or modify boolean expressions.	and, or, not
+conditional statement	A statement that executes a block of code only if a certain condition is met.	if, else, elif
+
+Question 2: Operator Compatibility with Python Data Types
+
+Operator	Int/Float	String	Boolean
++	Y	Y	N
+-	Y	N	N
+*	Y	Y	N
+/	Y	N	N
+//	Y	N	N
+%	Y	N	N
+==	Y	Y	Y
+!=	Y	Y	Y
+>	Y	Y	N
+<	Y	Y	N
+>=	Y	Y	N
+<=	Y	Y	N
+and	N	N	Y
+or	N	N	Y
+not	N	N	Y
+
+Question 3: Breaking Down a Problem using INPUT, COMPUTATION, OUTPUT
+
+Problem: Calculate the average grade of a student.
+
+INPUT:
+
+What: A list of grades (e.g., 85, 92, 78, 95)
+How to get them:
+Ask the user to enter the grades one by one, separated by commas.
+Read the grades from a file.
+Get the grades from a database.
+COMPUTATION:
+
+Convert the input string into a list of numbers.
+Calculate the sum of all the grades.
+Divide the sum by the number of grades to get the average.
+OUTPUT:
+
+What: The average grade (e.g., 87.5)
+How to output:
+Print the average grade to the console.
+Write the average grade to a file.
+Update the student's record in a database.
+Question 4: Identifying and Fixing Code Problems
+
+# Problem: Assigning a string value ("123") to a variable declared as an int.
+# Fix: Convert the string to an integer or declare the variable as a string.
+my_variable: int = int("123")  # Correct way to convert string to int
+
+
+# Problem: The variable name is incorrect in the print statement.
+# Fix: Use the correct variable name 'my_variable'.
+print(my_variable) 
+
+
+Python
+num_a: int = 5
+num_b: int = 10
+
+if num_a < num_b:
+    print("num_a is less than num_b")
+else:  # Added a colon after 'else'
+    print("num_b is less than or equal to num_a")  # Corrected the output message
+
+user_name: str = "Kal-El"
+home: str = "Krypton"
+
+# Problem: Incorrect f-string formatting. Variables should be enclosed in curly braces {}.
+# Fix: Use correct f-string syntax.
+print(f"Hello {user_name} from {home}. Welcome to Earth!") 
+
+
+Question 5: Analyzing the Expression
+
+The expression "hello" in "hi, how are you doing?" is checking if the substring "hello" is present within the larger string "hi, how are you doing?". It evaluates to False because "hello" is not found in the larger string.
+
+To get the opposite value (True), you can use the not in operator:
+
+"hello" not in "hi, how are you doing?" 
+
+
+Question 6: Converting Instructions to Code
+
+text = "hEElOO"
+uppercase_text = text.upper()
+print(uppercase_text)
+
+text = "hello123"
+is_only_letters = text.isalpha()
+print(is_only_letters)
+
+word = "strawberry"
+letter_count = len(word)
+print(letter_count)
+
+text = "Do you find this humorous?"
+e_count = text.count("e")
+print(e_count)
+
+
+Question 7 & 8: Age Check with Input Validation and Responses
+
+Python
+while True:
+    try:
+        age = int(input("Please enter your age: "))
+        if age < 16:
+            print("You are not old enough to drive.")
+        else:
+            print("You are old enough to drive.")
+
+        if age == 2:
+            print("You have barely started walking!")
+        elif age == 200:
+            print("Are you a human or a robot?")
+        break  # Exit the loop if valid input is provided
+    except ValueError:
+        print("Invalid input. Please enter a number for your age.")
